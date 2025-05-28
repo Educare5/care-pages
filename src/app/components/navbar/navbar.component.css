@@ -1,13 +1,38 @@
 .navbar {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding: 10px;
-
+    justify-content: space-between;
 }
 
 .logo-img {
     width: 50px;
+}
+
+
+
+.nav-items {
+    display: flex;
+    width: 65%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.round-button {
+    background-color: #0e3865;
+    color: white;
+    padding: 5px 15px;
+    height: 35px;
+    border-radius: 50px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.round-button:hover {
+    background-color: #0056b3;
+    /* Darker blue on hover */
 }
 
 .menu-toggle {

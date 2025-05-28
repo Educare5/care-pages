@@ -1,39 +1,45 @@
-.arch-1,
+/* .arch-1,
 .arch-2,
 .arch-3,
 .arch-4 {
-    /* Shades of blue */
-    border-radius: 500px 500px 0 0;
-    /* Create the arch shape */
+
+    border-radius: 50% 50% 0 0;
     position: absolute;
-    bottom: 0;
-    /* Stick to the bottom */
+    bottom: 5%;
     left: 50%;
-    /* Center horizontally */
     transform: translateX(-50%);
-    /* Adjust for perfect centering */
 }
 
+@media (max-width: 768px) {
+    .arch {
+        width: 50vw;
+        height: 25vw;
+        bottom: 3%;
+    }
+}
+
+
+
 .arch-1 {
-    width: 590px;
-    height: 300px;
+    width: 30vw;
+    height: 15vw;
     background-color: #348caf;
 }
 
 .arch-2 {
-    width: 500px;
-    height: 250px;
+    width: 30vw;
+    height: 15vw;
     background-color: #57a8c9;
 }
 
 .arch-3 {
-    width: 375px;
-    height: 195px;
+    width: 30vw;
+    height: 15vw;
     background-color: #71b6d1;
 }
 
 .arch-4 {
-    width: 280px;
-    height: 150px;
+    width: 30vw;
+    height: 15vw;
     background-color: #9bd2e7;
-}
+} */

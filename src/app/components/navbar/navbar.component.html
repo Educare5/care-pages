@@ -1,10 +1,18 @@
 <nav class="navbar">
-    <a class="logo" href="#">
-        <img src="assets/logo.jpg" class="logo-img">
-    </a>
+    <div class="img-container">
+        <a class="logo" href="#">
+            <img src="assets/logo.jpg" class="logo-img">
+        </a>
+    </div>
+    <div class="nav-items">
+        <ul [class.active]="isMenuOpen">
+            <li><a routerLink="/">Home</a></li>
+            <li><a routerLink="/about">About</a></li>
+        </ul>
+
+        <button class="round-button" routerLink="/form">Book a Demo</button>
+    </div>
+
     <button class="menu-toggle" (click)="toggleMenu()">☰</button>
-    <ul [class.active]="isMenuOpen">
-        <li><a routerLink="/">Home</a></li>
-        <li><a routerLink="/about">About</a></li>
-    </ul>
+
 </nav>

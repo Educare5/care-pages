@@ -1,0 +1,44 @@
+<form [formGroup]="userForm" (ngSubmit)="submitForm()">
+    <div class="form">
+        <div class="form-container">
+            <label>Name:</label>
+            <input type="text" formControlName="name">
+        </div>
+        <div *ngIf="userForm.controls['name'].invalid && userForm.controls['name'].touched">Name is required.</div>
+
+        <div class="form-container">
+            <label>Current Location:</label>
+            <input type="text" formControlName="currentLocation">
+        </div>
+
+        <div class="form-container">
+            <label>Standard:</label>
+            <input type="text" formControlName="standard">
+        </div>
+
+        <div *ngIf="userForm.controls['standard'].invalid && userForm.controls['standard'].touched">Standard is
+            required.
+        </div>
+
+        <div class="form-container">
+            <label>Phone Number:</label>
+            <input type="text" formControlName="phoneNumber">
+        </div>
+
+
+        <div *ngIf="userForm.controls['phoneNumber'].invalid && userForm.controls['phoneNumber'].touched">
+            Phone number must be 10 digits.
+        </div>
+
+        <div class="form-container">
+            <label>Email:</label>
+            <input type="email" formControlName="email">
+        </div>
+
+
+        <div *ngIf="userForm.controls['email'].invalid && userForm.controls['email'].touched">Enter a valid email.</div>
+    </div>
+
+
+    <button type="submit" [disabled]="userForm.invalid">Submit</button>
+</form>
