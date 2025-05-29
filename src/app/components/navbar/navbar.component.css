@@ -73,13 +73,14 @@ ul a {
     ul {
         display: none;
         flex-direction: column;
-        background: #ebebeb5c;
+        background: #0000008c;
         position: absolute;
         top: 50px;
         right: 0;
         width: 160px;
         padding: 10px;
         height: 100vh;
+        font-weight: 500;
     }
 
     ul.active {
@@ -88,5 +89,10 @@ ul a {
         top: 0;
         margin: 0;
         padding-top: 70px;
+    }
+
+    ul a {
+        font-weight: 800;
+
     }
 }

@@ -8,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'care';
+  isSidebarOpened = false;
+  sideBarOpened(opened: any) {
+    this.isSidebarOpened = opened;
+  }
 }

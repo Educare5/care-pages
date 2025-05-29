@@ -1,7 +1,6 @@
 <div class="main-container">
-  <app-navbar />
-  <div class="wrapper">
+  <app-navbar (menuToggle)="sideBarOpened($event)" />
+  <div class="wrapper" [ngClass]="{'blurred': isSidebarOpened}">
     <router-outlet />
-
   </div>
 </div>

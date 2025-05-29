@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
@@ -8,16 +8,16 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
+  @Output() menuToggle = new EventEmitter<boolean>();;
   isMenuOpen = false;
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute) { }
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
+    this.menuToggle.emit(this.isMenuOpen);
+
   }
 
-  goToCareers() {
-    this.router.navigate(['form'], { relativeTo: this.activatedRoute, queryParams: { page: 'careers' } })
-    this.toggleMenu();
-  }
+
 }

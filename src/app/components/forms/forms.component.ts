@@ -20,9 +20,13 @@ export class FormsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.activatedRoute.queryParams.subscribe(params => {
-      this.showCareerForm = params['page'] === 'career'
-    })
+    const currentPage = this.activatedRoute.snapshot.url.join('/');
+    if (currentPage.includes('form')) {
+      this.showCareerForm = false;
+    } else {
+      this.showCareerForm = true;
+
+    }
     this.renderForm();
   }
 

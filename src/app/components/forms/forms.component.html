@@ -1,6 +1,6 @@
 <form [formGroup]="userForm" (ngSubmit)="submitForm()">
     <div class="container">
-        <H2>Join Us!</H2>
+        <H2>{{showCareerForm ? 'Work with Us!':'Join Us!'}}</H2>
         <div class="form" *ngIf="!showCareerForm">
 
             <input type="text" formControlName="name" placeholder="Name">
@@ -29,7 +29,7 @@
             <div *ngIf="userForm.controls['email'].invalid && userForm.controls['email'].touched">Enter a valid email.
             </div>
         </div>
-         <div class="form" *ngIf="showCareerForm">
+        <div class="form" *ngIf="showCareerForm">
 
             <input type="text" formControlName="name" placeholder="Name">
             <div *ngIf="userForm.controls['name'].invalid && userForm.controls['name'].touched">Name is required.</div>
@@ -40,7 +40,7 @@
 
             <input type="text" formControlName="subject" placeholder="Subject">
 
-            <div *ngIf="userForm.controls['subject'].invalid && userForm.controls['subject'].touched">Subject is
+            <div *ngIf="userForm.controls['subject'].invalid && userForm.controls['subject'].touched">Standard is
                 required.
             </div>
 
