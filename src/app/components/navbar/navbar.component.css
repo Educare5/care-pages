@@ -19,7 +19,7 @@
 }
 
 .round-button {
-    background-color: #0e3865;
+    background-color: #ffa500;
     color: white;
     padding: 5px 15px;
     height: 35px;
@@ -27,11 +27,14 @@
     border: none;
     font-size: 14px;
     cursor: pointer;
-    transition: background 0.3s ease;
+    z-index: 10;
+    /* transition: background 0.3s ease; */
 }
 
 .round-button:hover {
-    background-color: #0056b3;
+    background-color: #e19200;
+    transition: 1s ease all;
+    transform: scale(0.95);
     /* Darker blue on hover */
 }
 
@@ -47,6 +50,7 @@
 ul {
     display: flex;
     list-style: none;
+    cursor: pointer;
 }
 
 ul li {
@@ -62,20 +66,27 @@ ul a {
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
+        z-index: 1;
+
     }
 
     ul {
         display: none;
         flex-direction: column;
-        background: #444;
+        background: #ebebeb5c;
         position: absolute;
         top: 50px;
-        right: 20px;
-        width: 150px;
+        right: 0;
+        width: 160px;
         padding: 10px;
+        height: 100vh;
     }
 
     ul.active {
         display: flex;
+        position: absolute;
+        top: 0;
+        margin: 0;
+        padding-top: 70px;
     }
 }

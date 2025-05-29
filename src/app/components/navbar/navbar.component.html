@@ -1,18 +1,20 @@
 <nav class="navbar">
     <div class="img-container">
-        <a class="logo" href="#">
+        <a class="logo" routerLink="/">
             <img src="assets/logo.jpg" class="logo-img">
         </a>
     </div>
     <div class="nav-items">
         <ul [class.active]="isMenuOpen">
-            <li><a routerLink="/">Home</a></li>
-            <li><a routerLink="/about">About</a></li>
+            <li><a routerLink="/" (click)="toggleMenu()">Home</a></li>
+            <li><a (click)="goToCareers()">Careers</a></li>
+            <li><a routerLink="/about" (click)="toggleMenu()">About</a></li>
         </ul>
 
         <button class="round-button" routerLink="/form">Book a Demo</button>
     </div>
 
-    <button class="menu-toggle" (click)="toggleMenu()">☰</button>
+    <button class="menu-toggle" (click)="toggleMenu()"><span *ngIf="!isMenuOpen">☰</span>
+        <span *ngIf="isMenuOpen">x</span></button>
 
 </nav>
