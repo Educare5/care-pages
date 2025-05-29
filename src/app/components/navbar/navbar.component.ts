@@ -13,9 +13,12 @@ export class NavbarComponent {
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute) { }
 
-  toggleMenu() {
-    this.isMenuOpen = !this.isMenuOpen;
-    this.menuToggle.emit(this.isMenuOpen);
-
+  toggleMenu(screen: string) {
+    if (screen === 'mobile') {
+      this.isMenuOpen = !this.isMenuOpen;
+      this.menuToggle.emit(this.isMenuOpen);
+    } else {
+      this.isMenuOpen = false;
+    }
   }
 }

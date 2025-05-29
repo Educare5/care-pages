@@ -5,21 +5,20 @@
         </a>
     </div>
     <div class="nav-items">
-        <!-- <ul [class.active]="!isMenuOpen">
+        <ul [class.active]="isMenuOpen" *ngIf="!isMenuOpen">
             <li><a routerLink="/">Home</a></li>
             <li><a routerLink="/career">Careers</a></li>
             <li><a routerLink="/about">About</a></li>
-        </ul> -->
-        <ul [class.active]="isMenuOpen">
-            <li><a routerLink="/" (click)="toggleMenu()">Home</a></li>
-            <li><a routerLink="/career" (click)="toggleMenu()">Careers</a></li>
-            <li><a routerLink="/about" (click)="toggleMenu()">About</a></li>
         </ul>
-
+        <ul [class.active]="isMenuOpen" *ngIf="isMenuOpen">
+            <li><a routerLink="/" (click)="toggleMenu('mobile')">Home</a></li>
+            <li><a routerLink="/career" (click)="toggleMenu('mobile')">Careers</a></li>
+            <li><a routerLink="/about" (click)="toggleMenu('mobile')">About</a></li>
+        </ul>
         <button class="round-button" routerLink="/form">Book a Demo</button>
     </div>
 
-    <button class="menu-toggle" (click)="toggleMenu()"><span *ngIf="!isMenuOpen">☰</span>
+    <button class="menu-toggle" (click)="toggleMenu('mobile')"><span *ngIf="!isMenuOpen">☰</span>
         <span *ngIf="isMenuOpen">x</span></button>
 
 </nav>
