@@ -10,12 +10,12 @@
 }
 
 
-
 .nav-items {
     display: flex;
     width: 65%;
     justify-content: space-between;
     align-items: center;
+    z-index: 1;
 }
 
 .round-button {
@@ -67,7 +67,6 @@ ul a {
     .menu-toggle {
         display: block;
         z-index: 1;
-
     }
 
     ul {
@@ -94,5 +93,10 @@ ul a {
     ul a {
         font-weight: 800;
 
+    }
+
+
+    ul li {
+        margin: 10px 15px;
     }
 }

@@ -5,6 +5,11 @@
         </a>
     </div>
     <div class="nav-items">
+        <!-- <ul [class.active]="!isMenuOpen">
+            <li><a routerLink="/">Home</a></li>
+            <li><a routerLink="/career">Careers</a></li>
+            <li><a routerLink="/about">About</a></li>
+        </ul> -->
         <ul [class.active]="isMenuOpen">
             <li><a routerLink="/" (click)="toggleMenu()">Home</a></li>
             <li><a routerLink="/career" (click)="toggleMenu()">Careers</a></li>
