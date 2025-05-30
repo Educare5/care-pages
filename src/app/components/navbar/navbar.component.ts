@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, HostListener, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
@@ -10,6 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class NavbarComponent {
   @Output() menuToggle = new EventEmitter<boolean>();;
   isMenuOpen = false;
+  isMobile = window.innerWidth < 768; // Adjust breakpoint as needed
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute) { }
 
@@ -20,5 +21,10 @@ export class NavbarComponent {
     } else {
       this.isMenuOpen = false;
     }
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event) {
+    this.isMobile = window.innerWidth < 768;
   }
 }

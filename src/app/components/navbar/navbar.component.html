@@ -1,21 +1,23 @@
 <nav class="navbar">
-    <div class="img-container">
+    <div class="img-container" [ngClass]="{'blurred':isMenuOpen && isMobile}">
         <a class="logo" routerLink="/">
             <img src="assets/logo.jpg" class="logo-img">
         </a>
     </div>
     <div class="nav-items">
         <ul [class.active]="isMenuOpen" *ngIf="!isMenuOpen">
-            <li><a routerLink="/">Home</a></li>
-            <li><a routerLink="/career">Careers</a></li>
-            <li><a routerLink="/about">About</a></li>
+            <li><a routerLink="/" (click)="toggleMenu('desk')">Home</a></li>
+            <li><a routerLink="/career" (click)="toggleMenu('desk')">Careers</a></li>
+            <li><a routerLink="/about" (click)="toggleMenu('desk')">About</a></li>
         </ul>
         <ul [class.active]="isMenuOpen" *ngIf="isMenuOpen">
             <li><a routerLink="/" (click)="toggleMenu('mobile')">Home</a></li>
             <li><a routerLink="/career" (click)="toggleMenu('mobile')">Careers</a></li>
             <li><a routerLink="/about" (click)="toggleMenu('mobile')">About</a></li>
         </ul>
-        <button class="round-button" routerLink="/form">Book a Demo</button>
+
+        <button class="round-button" routerLink="/form" [ngClass]="{'blurred':isMenuOpen && isMobile}">Book a
+            Demo</button>
     </div>
 
     <button class="menu-toggle" (click)="toggleMenu('mobile')"><span *ngIf="!isMenuOpen">☰</span>

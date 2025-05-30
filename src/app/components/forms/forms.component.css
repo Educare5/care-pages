@@ -17,9 +17,7 @@ input:focus {
 
 input::placeholder {
     color: whitesmoke;
-    /* Change to your desired color */
     opacity: 1;
-    /* Ensures visibility in Firefox */
 }
 
 
@@ -29,7 +27,6 @@ button {
     font-size: 14px;
     border: none;
     cursor: pointer;
-    /* transition: background 0.3s ease-in-out, transform 0.1s; */
     padding: 5px 15px;
     height: 35px;
     border-radius: 50px;
@@ -38,14 +35,19 @@ button {
 
 button:hover {
     background: #a1a09dd9;
-    transition: 1s ease all;
-    transform: scale(0.95);
+    /* transition: 1s ease all;
+    transform: scale(0.95); */
+}
+
+button:disabled {
+    background: #6161619c;
+    color: rgb(139, 139, 139);
+    cursor: not-allowed;
 
 }
 
 button:active {
     transform: scale(0.95);
-    /* Slight press effect */
 }
 
 .form {
@@ -53,7 +55,6 @@ button:active {
     flex-direction: column;
     gap: 15px;
     align-items: center;
-
 }
 
 .container {
@@ -65,7 +66,6 @@ button:active {
     text-align: center;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    /* Soft shadow */
 }
 
 H2 {

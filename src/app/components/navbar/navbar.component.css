@@ -1,14 +1,25 @@
 .navbar {
     display: flex;
     align-items: center;
-    padding: 10px;
     justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: calc(100% - 20px);
+    padding: 10px;
+    z-index: 99;
+    background-color: #58c1ebcc;
 }
 
 .logo-img {
     width: 50px;
 }
 
+.img-container.blurred,
+.round-button.blurred {
+    filter: blur(3px);
+    pointer-events: none;
+}
 
 .nav-items {
     display: flex;
@@ -72,7 +83,7 @@ ul a {
     ul {
         display: none;
         flex-direction: column;
-        background: #0000008c;
+        background: #000b558c;
         position: absolute;
         top: 50px;
         right: 0;
