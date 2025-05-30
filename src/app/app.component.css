@@ -5,12 +5,14 @@
 }
 
 .wrapper {
-    padding: 100px 20px 20px 20px;
+    padding: 100px 20px 0 20px;
     transition: filter 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 .wrapper.blurred {
     filter: blur(5px);
-    background-color: rgba(0, 0, 0, 0.3);
     pointer-events: none;
+    position: fixed;
+    overflow: hidden;
+    width: calc(100% - 20px);
 }
